@@ -11,8 +11,7 @@ test = 2
 prime = 2
 
 while i <= 10001:
-    factors = f.factor(test)
-    if len(factors) == 1:
+    if f.isPrime(test):
         i += 1
         prime = test
         

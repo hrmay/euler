@@ -1,3 +1,5 @@
+from math import sqrt
+
 #returns all prime factors (besides 1)
 def factor(num):
 	factors = list()
@@ -15,3 +17,14 @@ def factor(num):
 		factors.append(num)
 		
 	return factors
+	
+def isPrime(num):
+	if num == 2:
+		return True
+	elif num % 2 == 0:
+		return False
+	else:
+		for i in range(3,int(sqrt(num))+1,2):
+			if num % i == 0:
+				return False
+		return True
